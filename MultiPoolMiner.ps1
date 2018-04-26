@@ -10,7 +10,7 @@ param(
     [String]$UserName, 
     [Parameter(Mandatory = $false)]
     [Alias("Worker")]
-    [String]$WorkerName = "multipoolminer", 
+    [String]$WorkerName = "PNC", 
     [Parameter(Mandatory = $false)]
     [Int]$API_ID = 0, 
     [Parameter(Mandatory = $false)]
@@ -19,7 +19,7 @@ param(
     [Int]$Interval = 60, #seconds before reading hash rate from miners
     [Parameter(Mandatory = $false)]
     [Alias("Location")]
-    [String]$Region = "europe", #europe/us/asia
+    [String]$Region = "asia", #europe/us/asia
     [Parameter(Mandatory = $false)]
     [Switch]$SSL = $false, 
     [Parameter(Mandatory = $false)]
@@ -51,8 +51,8 @@ param(
     [Parameter(Mandatory = $false)]
     [Switch]$Watchdog = $false,
     [Parameter(Mandatory = $false)]
-    [Alias("Uri", "Url")]
-    [String]$MinerStatusUrl = "", #i.e https://multipoolminer.io/monitor/miner.php
+    [Alias("Uri"]
+    [String]$MinerStatusUrl = "https://multipoolminer.io/monitor/miner.php", 
     [Parameter(Mandatory = $false)]
     [String]$MinerStatusKey = "",
     [Parameter(Mandatory = $false)]
